@@ -1,17 +1,25 @@
-import React from 'react'
-import './App.css';
-import Header from './components/Header';
-import Navbar from './components/Navbar';
-import Profile from './components/Profile';
+import React from "react";
+import "./App.css";
+import Header from "./components/Header/Header";
+import Navbar from "./components/Navbar/Navbar";
+import Profile from "./components/Profile/Profile";
+import Dialogs from "./components/Dialogs/Dialogs";
+import {
+  BrowserRouter,
+  BrowserRouter as Router,
+  Route,
+  Routes,
+} from "react-router-dom";
 
-const App = () => {
+const App = (props) => {
   return (
-    <div className='app-wrapper'>
+    <div>
       <Header />
       <Navbar />
-      <Profile />
-    </div>);
-}
-
+      <Route path="/profile" component={Profile} />
+      <Route />
+    </div>
+  );
+};
 
 export default App;
